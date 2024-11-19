@@ -1,16 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product List</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .square {
+      margin: 20px;
+      width: 150px;
+      height: 150px;
+      border: 1px solid;
+      display: grid;
+      grid-template-areas:
+        "area1 . area3"
+        "area4 area5 area6"
+        "area7 . area9";
+      grid-template-rows: repeat(3, 1fr);
+      /* Three rows of equal height */
+      grid-template-columns: repeat(3, 1fr);
+      /* Three columns of equal width */
+
+    }
+
+    .child1 {
+      padding: 5px;
+      grid-area: "area1";
+    }
+
+    .child1 {
+      padding: 5px;
+      grid-area: area1;
+    }
+
+    .child2 {
+      padding: 5px;
+      grid-area: area3;
+    }
+
+    .child3 {
+      padding: 5px;
+      grid-area: area4;
+    }
+
+    .child4 {
+      padding: 5px;
+      grid-area: area5;
+    }
+
+    .child5 {
+      padding: 5px;
+      grid-area: area6;
+    }
+    .child6 {
+      padding: 5px;
+      grid-area: area7;
+    }
+
+    .child7 {
+      padding: 5px;
+      grid-area: area9;
+    }
+    .circle {
+      background-color: black;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
   <!-- Bootstrap CSS -->
 </head>
+
 <body>
-
-  
-
+  <div class="square">
+    <div class="child1">
+      <div class="circle"></div>
+    </div>
+    <div class="child2">
+      <div class="circle"></div>
+    </div>
+    <div class="child3">
+      <div class="circle"></div>
+    </div>
+    <div class="child4">
+      <div class="circle"></div>
+    </div>
+    <div class="child5">
+      <div class="circle"></div>
+    </div>
+    <div class="child6">
+      <div class="circle"></div>
+    </div>
+    <div class="child7">
+      <div class="circle"></div>
+    </div>
+  </div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
