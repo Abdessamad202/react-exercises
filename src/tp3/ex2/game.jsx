@@ -48,7 +48,7 @@ export default function Game(params) {
       <h4>face : {face}</h4>
       <h4>Nombre d'essais : {chance}</h4>
       <button type="button" onClick={handleClick}>jouer</button>
-      {elements.length == face  ? <> <h4 style={{color : "green"}}>congratulations</h4><button onClick={replay}>replay</button></> : chance === 0 ? <><h4 style={{color : "red"}}>game over try again</h4><button  onClick={replay}>replay</button> </>: ""}
+      {elements.length === face  ? <> <h4 style={{color : "green"}}>congratulations</h4><button onClick={replay}>replay</button></> : chance === 0 ? <><h4 style={{color : "red"}}>game over try again</h4><button  onClick={replay}>replay</button> </>: ""}
     </div>
   </>
 }
